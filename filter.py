@@ -1,6 +1,8 @@
-from typing import Callable, Iterable, Any, List
+"""module docstring"""
+#from typing import Callable, Iterable, Any, List
+import functools
 
 
-def filter_(func: Callable[[Any], Any], l: Iterable[Any]) -> List[Any]:
-
-    return []
+def filter_(function, listing):
+    """docstring"""
+    return functools.reduce(lambda x, y: x + [y] if function(y) else x, listing, [])
