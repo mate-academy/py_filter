@@ -11,4 +11,4 @@ def filter_(func: Callable[[Any], Any], lst: Iterable[Any]) -> List[Any]:
     :param lst:
     :return:
     '''
-    return list(filter(func, lst))
+    return [i for i in lst if func(i)]
